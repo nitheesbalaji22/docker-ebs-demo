@@ -12,5 +12,5 @@ after_success:
   #log in to docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #take built images and push to DOcker hub
-  - docker push parag290/docker-react
+  - docker push nitheesbalaji/demo-apps
 
