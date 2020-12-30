@@ -14,17 +14,3 @@ after_success:
   #take built images and push to DOcker hub
   - docker push parag290/docker-react
 
-deploy:
-  provider: elasticbeanstalk
-  region: "us-west-1"
-  app: "docker-web-app"
-  env: "DockerWebApp-env "
-  bucket_name: "elasticbeanstalk-us-west-1-882324140720"
-  bucket_path: "docker-web-app"
-  on:
-    branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key:
-    secure: "$AWS_SECRET_KEY"
-
-  
